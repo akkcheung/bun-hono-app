@@ -1,0 +1,31 @@
+{{#>layout }}
+<div id="App-div" hx-boost="true" hx-push-url="false">
+  <h1><a href="/app">Todo App</a></h1>
+
+  <div class="d-flex">
+    <div class="p-2 w-50" >
+      Projects : <button class="btn btn-outline-primary" 
+        hx-post="/projects/new" 
+        hx-target="#App-div"
+        hx-prompt="Enter new project">+</button>
+
+      <p></p>
+      <div>
+        {{>ProjectList }}
+      </div>
+    </div>
+
+    <div class="p-2 w-50">
+      <div hx-get="/projects/{{project.id}}/todos" hx-trigger="newTodo from:body">
+        {{>TodoListForProject}}
+    </div>
+
+      <p></p>
+      {{>NewTodoForm }}
+    </div>
+  </div>
+</div>
+
+{{/layout }}
+
+

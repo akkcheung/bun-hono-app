@@ -1,0 +1,9 @@
+  <form hx-put='/projects/{{projectId}}/todos/{{id}}/state' hx-trigger="mouseup delay:50ms" hx-target="this" hx-swap="outerHTML" hx-push-url="false">
+    <input name=todo-{{id}}-checkbox id=todo-{{id}}-checkbox class="form-check-input" type="checkbox" {{#if (isTrue done)}}checked{{/if}} />
+    <label for=`todo-{{id}}-checkbox`>
+      {{#if (isTrue done)}}<s>{{/if}}
+        {{title}}
+      {{#if (isTrue done)}}</s>{{/if}}
+    </label>
+  </form>
+

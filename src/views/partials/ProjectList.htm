@@ -1,0 +1,5 @@
+<ul class="list-group">
+{{#each projects}}
+  <li class="list-group-item {{#if (eq id ../project.id)}}active{{/if}}"><a href="/projects/{{id}}" class="link-dark">{{name}}</a></li>
+{{/each}}
+</ul>

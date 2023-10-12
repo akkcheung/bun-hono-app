@@ -1,0 +1,12 @@
+<form id="new-todo-form" hx-post=/projects/{{project.id}}/todos/new hx-push-url="false" hx-target="this" hx-swap="outerHTML">
+  <div> 
+    <input type="text" class="form-control" name="title" placeholder="Title..." />
+
+    <p></p>
+    <button type="submit" class="btn btn-primary">Add todo</button>
+  </div>
+  <!-- <FormErrorText>{errors?.name}</FormErrorText> -->
+  {{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+  {{/if}}
+</form>

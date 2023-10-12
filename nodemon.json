@@ -1,0 +1,7 @@
+{
+  "watch": ["src"],
+  "ext": ".ts,.js, .htm",
+  "ignore": [],
+  "exec": "bun ./src/app.js"
+}
+
