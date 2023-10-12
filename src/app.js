@@ -3,7 +3,6 @@ import { Database } from "bun:sqlite"
 
 import { initTables, initData } from "./db.js"
 import { registerHelpers, registerPartials } from "./hbs.js"
-import { schema } from "./validation.js"
 import { viewRoot, viewApp, viewNewTodo, viewTodoList, viewAppAfterProjectSelect, viewAppAfterTodoStausChange, viewAppAfterProjectNew } from "./routes.js"
 
 const app = new Hono()

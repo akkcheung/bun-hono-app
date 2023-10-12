@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "bun run --hot src/index.js"
+    "dev": "bun run src/app.js"
   },
   "dependencies": {
     "handlebars": "^4.7.8",
